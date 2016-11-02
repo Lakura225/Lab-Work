@@ -1,0 +1,8 @@
+creat list 50 length of 0
+loop until 50 count
+	count + 1
+	n = count * iter
+	index by n
+	itterate list by n
+		if 0 then 1
+		else if 1 then 0
