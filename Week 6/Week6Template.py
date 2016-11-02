@@ -23,5 +23,6 @@ True
 # *** DO NOT CHANGE CODE ABOVE THIS LINE ***
 # *** DO NOT ADD ANY COMMENTS OF YOUR OWN IN THE SUBMITTED SOLUTION ***
 
+
 def sumHighest(a, n):
-    # Add code here
+    return 0 if n <= 0 else sum(sorted(a)[-n:])
