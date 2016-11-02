@@ -25,4 +25,4 @@ True
 
 
 def sumHighest(a, n):
-    return 0 if n <= 0 else sum(sorted(a)[-n:])
+    return 0 if n <= 0 else sum(sorted(a, reverse = True)[:n])
