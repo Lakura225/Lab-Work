@@ -36,4 +36,4 @@ Does it handle grades as well?
 def sortStudents(a):
 	#return sorted(a, key=lambda x: (-x[1], x[0]))
 	#return sorted(a, key=lambda x: (-x[1], x[0])) if isinstance(a,int) else sorted(a, key=lambda x: (x[1], x[0]))
-	return sorted(a, key=lambda x: (x[1])) if not isinstance(a, int) else sorted(a, key=lambda x: (-x[1], x[0]))
+	return sorted(a, key=lambda x: (x[1])) if  else sorted(a, key=lambda x: (-x[1], x[0]))
