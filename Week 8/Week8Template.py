@@ -28,16 +28,14 @@ True
 
 import csv
 
+
 def sumRows(filename, header=False):
     # Add code here
     dic = {}
     with open(filename) as csvfile:
-    	for row in csv.reader(filename):
-    		
-
+        for row in csv.reader(filename):
 
 
 def sumColumns(filename):
     # Add code here
     dic = {}
-
