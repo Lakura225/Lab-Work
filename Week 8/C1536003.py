@@ -36,12 +36,23 @@ def sumRows(filename, header=False):
         reader = csv.reader(csvfile)
         if header:
             next(reader, None)
-        dic = {rows[0]: rows[1:] for rows in reader}
-        dic = {k: sum(map(int, v)) for k, v in dic.items()}
+        for rows in reader:
+            total = 0.0
+            for num in range(1, len(rows)):
+                if str(rows[num]).isdigit() and rows[num] != '':
+                    total += float(rows[num])
+            dic[rows[0]] = total
 
     return dic
 
 
 def sumColumns(filename):
     # Add code here
-    dic = {}
+    with open(filename) as csvfile:
+        reader = csv.reader(csvfile)
+        names = next(reader)
+        sums = [0 for _ in names]
+        for line in reader:
+            for i in range(len(sums)):
+                sums[i] += int(0 if line[i] == '' else line[i])
+        return dict(zip(names, sums))
