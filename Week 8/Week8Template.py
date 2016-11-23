@@ -33,7 +33,13 @@ def sumRows(filename, header=False):
     # Add code here
     dic = {}
     with open(filename) as csvfile:
-        for row in csv.reader(filename):
+        reader = csv.reader(csvfile)
+        if header:
+            next(reader, None)
+        dic = {rows[0]: rows[1:] for rows in reader}
+        dic = {k: sum(map(int, v)) for k, v in dic.items()}
+
+    return dic
 
 
 def sumColumns(filename):
