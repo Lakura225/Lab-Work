@@ -1,0 +1,32 @@
+h1 {
+    font-family: sans-serif;
+    text-align: center;
+    color: black;
+}
+
+h2 {
+    font-family: sans-serif;
+    text-align: left;
+    color: black;
+}
+
+p {
+    font-family: sans-serif;
+    text-align: left;
+    color: black;
+}
+
+.table1 {
+    font-family: sans-serif;
+    border: 1px solid black;
+    
+}
+
+#navmenu {
+    display: inline;
+    list-style: none;
+    width: 12em;
+    padding: 4 px;
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+    color: #333;
+}
