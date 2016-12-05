@@ -39,5 +39,7 @@ def winProbability(ra, rb, n):
                     scoreA += 1
                 else:
                     scoreB += 1
+        if Awins >= n:
+            Awins -= n
     prob = Awins / n
     print("{0:.2f}".format(prob))
