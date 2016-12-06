@@ -23,16 +23,22 @@ def game(ra, rb):
 
 def winProbability(ra, rb, n):
     Awins = 0
-    for i in range(n):
-        probA = ra / (ra + rb)
-        scoreA = 0
-        scoreB = 0
-        # random.seed(57)
-        for f in range(n):
+    probA = ra / (ra + rb)
+    scoreA = 0
+    scoreB = 0
+    # random.seed(57)
+    for f in range(n):
+        a = 0
+        while a == 0:
             if scoreA >= 11 and scoreA - scoreB >= 2:
                 Awins += 1
                 scoreA = 0
                 scoreB = 0
+                a = 1
+            elif scoreB >= 11 and scoreB - scoreA >= 2:
+                scoreA = 0
+                scoreB = 0
+                a = 1
             else:
                 rng = random.random()
                 if rng < probA:
